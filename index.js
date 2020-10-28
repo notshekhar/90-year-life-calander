@@ -38,6 +38,8 @@ function calculateGrid() {
         let a = []
         for (let j = 0; j < cols; j++) {
             if (counter <= no_of_weeks) {
+                if (completed_life > oneWeek) completed_life -= oneWeek
+                else completed_life = 0
                 a.push({
                     per_c:
                         ((completed_life > oneWeek ? oneWeek : completed_life) /
@@ -45,8 +47,6 @@ function calculateGrid() {
                         100,
                 })
                 counter++
-                if (completed_life > oneWeek) completed_life -= oneWeek
-                else completed_life = 0
             }
         }
         if (a.length > 0) g.push(a)

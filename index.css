@@ -34,6 +34,7 @@
     font-size: 15px;
     font-weight: 800;
 }
+
 .canvas {
     position: absolute;
     top: var(--height-h);
